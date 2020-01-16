@@ -1,42 +1,40 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <%
-        String contextPath = request.getContextPath();
-    %>
+    <head>
+        <%String contextPath = request.getContextPath();%>
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Homepage | SensationApp - Responsive admin template.</title>
-        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <link rel="shortcut icon" href="<%=contextPath%>/img/favicon.ico">
         <!--STYLESHEET-->
         <!--=================================================-->
         <!--Roboto Slab Font [ OPTIONAL ] -->
         <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
         <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,400" rel="stylesheet">
         <!--Bootstrap Stylesheet [ REQUIRED ]-->
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="<%=contextPath%>/css/bootstrap.min.css" rel="stylesheet">
         <!--Jasmine Stylesheet [ REQUIRED ]-->
-        <link href="../../css/style.css" rel="stylesheet">
+        <link href="<%=contextPath%>/css/style.css" rel="stylesheet">
         <!--Font Awesome [ OPTIONAL ]-->
-        <link href="../../plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="<%=contextPath%>/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!--Switchery [ OPTIONAL ]-->
-        <link href="../../plugins/switchery/switchery.min.css" rel="stylesheet">
+        <link href="<%=contextPath%>/plugins/switchery/switchery.min.css" rel="stylesheet">
         <!--Bootstrap Select [ OPTIONAL ]-->
-        <link href="../../plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+        <link href="<%=contextPath%>/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
         <!--Switchery [ OPTIONAL ]-->
-        <link href="../../plugins/jvectormap/jquery-jvectormap.css" rel="stylesheet">
+        <link href="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap.css" rel="stylesheet">
         <!--Bootstrap Validator [ OPTIONAL ]-->
-        <link href="../../plugins/bootstrap-validator/bootstrapValidator.min.css" rel="stylesheet">
+        <link href="<%=contextPath%>/plugins/bootstrap-validator/bootstrapValidator.min.css" rel="stylesheet">
         <!--Demo [ DEMONSTRATION ]-->
-        <link href="../../css/demo/jquery-steps.min.css" rel="stylesheet">
+        <link href="<%=contextPath%>/css/demo/jquery-steps.min.css" rel="stylesheet">
         <!--Demo [ DEMONSTRATION ]-->
-        <link href="../../css/demo/jasmine.css" rel="stylesheet">
+        <link href="<%=contextPath%>/css/demo/jasmine.css" rel="stylesheet">
         <!--SCRIPT-->
         <!--=================================================-->
         <!--Page Load Progress Bar [ OPTIONAL ]-->
-        <link href="../../plugins/pace/pace.min.css" rel="stylesheet">
-        <script src="../../plugins/pace/pace.min.js"></script>
+        <link href="<%=contextPath%>/plugins/pace/pace.min.css" rel="stylesheet">
+        <script src="<%=contextPath%>/plugins/pace/pace.min.js"></script>
     </head>
     <!--TIPS-->
     <!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
@@ -49,7 +47,7 @@
                     <!--Brand logo & name-->
                     <!--================================-->
                     <div class="navbar-header">
-                        <a href="index.jsp" class="navbar-brand">
+                        <a href="index.html" class="navbar-brand">
                             <i class="fa fa-cube brand-icon"></i>
                             <div class="brand-title">
                                 <span class="brand-text">SensationApp</span>
@@ -91,16 +89,18 @@
                                             <ul class="head-list">
                                                 <!-- Dropdown list-->
                                                 <li>
-                                                    <div class="media-left"> <img src="../../img/av2.png" alt="Profile Picture" class="img-circle img-sm"> </div>
-                                                    <div class="media-body">
-                                                        <div class="text-nowrap">Andy sent you a message</div>
-                                                        <small class="text-muted">15 minutes ago</small>
-                                                    </div>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left"> <img src="<%=contextPath%>/img/av2.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">Andy sent you a message</div>
+                                                            <small class="text-muted">15 minutes ago</small> 
+                                                        </div>
+                                                    </a>
                                                 </li>
                                                 <!-- Dropdown list-->
                                                 <li>
                                                     <a href="#" class="media">
-                                                        <div class="media-left"> <img src="../../img/av4.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-left"> <img src="<%=contextPath%>/img/av4.png" alt="Profile Picture" class="img-circle img-sm"> </div>
                                                         <div class="media-body">
                                                             <div class="text-nowrap">Lucy sent you a message</div>
                                                             <small class="text-muted">30 minutes ago</small> 
@@ -110,7 +110,7 @@
                                                 <!-- Dropdown list-->
                                                 <li>
                                                     <a href="#" class="media">
-                                                        <div class="media-left"> <img src="../../img/av3.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-left"> <img src="<%=contextPath%>/img/av3.png" alt="Profile Picture" class="img-circle img-sm"> </div>
                                                         <div class="media-body">
                                                             <div class="text-nowrap">Jackson sent you a message</div>
                                                             <small class="text-muted">40 minutes ago</small> 
@@ -120,7 +120,7 @@
                                                 <!-- Dropdown list-->
                                                 <li>
                                                     <a href="#" class="media">
-                                                        <div class="media-left"> <img src="../../img/av6.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-left"> <img src="<%=contextPath%>/img/av6.png" alt="Profile Picture" class="img-circle img-sm"> </div>
                                                         <div class="media-body">
                                                             <div class="text-nowrap">Donna sent you a message</div>
                                                             <small class="text-muted">5 hours ago</small> 
@@ -130,7 +130,7 @@
                                                 <!-- Dropdown list-->
                                                 <li>
                                                     <a href="#" class="media">
-                                                        <div class="media-left"> <img src="../../img/av4.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-left"> <img src="<%=contextPath%>/img/av4.png" alt="Profile Picture" class="img-circle img-sm"> </div>
                                                         <div class="media-body">
                                                             <div class="text-nowrap">Lucy sent you a message</div>
                                                             <small class="text-muted">Yesterday</small> 
@@ -140,7 +140,7 @@
                                                 <!-- Dropdown list-->
                                                 <li>
                                                     <a href="#" class="media">
-                                                        <div class="media-left"> <img src="../../img/av3.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-left"> <img src="<%=contextPath%>/img/av3.png" alt="Profile Picture" class="img-circle img-sm"> </div>
                                                         <div class="media-body">
                                                             <div class="text-nowrap">Jackson sent you a message</div>
                                                             <small class="text-muted">Yesterday</small> 
@@ -247,29 +247,29 @@
                             <!--Language selector-->
                             <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                             <li class="dropdown">
-                                <a id="demo-lang-switch" class="lang-selector dropdown-toggle" href="#" data-toggle="dropdown"> <span class="lang-selected"> <img class="lang-flag" src="../../img/flags/united-kingdom.png" alt="English"> <span class="lang-id">EN</span> <span class="lang-name">English</span> </span>
+                                <a id="demo-lang-switch" class="lang-selector dropdown-toggle" href="#" data-toggle="dropdown"> <span class="lang-selected"> <img class="lang-flag" src="<%=contextPath%>/img/flags/united-kingdom.png" alt="English"> <span class="lang-id">EN</span> <span class="lang-name">English</span> </span>
                                 </a>
                                 <!--Language selector menu-->
                                 <ul class="head-list dropdown-menu with-arrow">
                                     <li>
                                         <!--English-->
-                                        <a href="#" class="active"> <img class="lang-flag" src="../../img/flags/united-kingdom.png" alt="English"> <span class="lang-id">EN</span> <span class="lang-name">English</span> </a>
+                                        <a href="#" class="active"> <img class="lang-flag" src="<%=contextPath%>/img/flags/united-kingdom.png" alt="English"> <span class="lang-id">EN</span> <span class="lang-name">English</span> </a>
                                     </li>
                                     <li>
                                         <!--France-->
-                                        <a href="#"> <img class="lang-flag" src="../../img/flags/france.png" alt="France"> <span class="lang-id">FR</span> <span class="lang-name">Fran&ccedil;ais</span> </a>
+                                        <a href="#"> <img class="lang-flag" src="<%=contextPath%>/img/flags/france.png" alt="France"> <span class="lang-id">FR</span> <span class="lang-name">Fran&ccedil;ais</span> </a>
                                     </li>
                                     <li>
                                         <!--Germany-->
-                                        <a href="#"> <img class="lang-flag" src="../../img/flags/germany.png" alt="Germany"> <span class="lang-id">DE</span> <span class="lang-name">Deutsch</span> </a>
+                                        <a href="#"> <img class="lang-flag" src="<%=contextPath%>/img/flags/germany.png" alt="Germany"> <span class="lang-id">DE</span> <span class="lang-name">Deutsch</span> </a>
                                     </li>
                                     <li>
                                         <!--Italy-->
-                                        <a href="#"> <img class="lang-flag" src="../../img/flags/italy.png" alt="Italy"> <span class="lang-id">IT</span> <span class="lang-name">Italiano</span> </a>
+                                        <a href="#"> <img class="lang-flag" src="<%=contextPath%>/img/flags/italy.png" alt="Italy"> <span class="lang-id">IT</span> <span class="lang-name">Italiano</span> </a>
                                     </li>
                                     <li>
                                         <!--Spain-->
-                                        <a href="#"> <img class="lang-flag" src="../../img/flags/spain.png" alt="Spain"> <span class="lang-id">ES</span> <span class="lang-name">Espa&ntilde;ol</span> </a>
+                                        <a href="#"> <img class="lang-flag" src="<%=contextPath%>/img/flags/spain.png" alt="Spain"> <span class="lang-id">ES</span> <span class="lang-name">Espa&ntilde;ol</span> </a>
                                     </li>
                                 </ul>
                             </li>
@@ -279,7 +279,7 @@
                             <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                             <li id="dropdown-user" class="dropdown">
                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
-                                    <span class="pull-right"> <img class="img-circle img-user media-object" src="../../img/av1.png" alt="Profile Picture"> </span>
+                                    <span class="pull-right"> <img class="img-circle img-user media-object" src="<%=contextPath%>/img/av1.png" alt="Profile Picture"> </span>
                                     <div class="username hidden-xs">John Doe</div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right with-arrow">
@@ -570,7 +570,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="media-object center"> 
-                                                            <img src="../../img/av1.png" alt="" class="img-responsive img-rounded">
+                                                            <img src="<%=contextPath%>/img/av1.png" alt="" class="img-responsive img-rounded">
                                                         </div>
                                                     </td>
                                                     <td> Semantha Armstrong </td>
@@ -589,7 +589,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="media-object center"> 
-                                                            <img src="../../img/av1.png" alt="" class="img-responsive img-rounded">
+                                                            <img src="<%=contextPath%>/img/av1.png" alt="" class="img-responsive img-rounded">
                                                         </div>
                                                     </td>
                                                     <td> Jonathan Smith </td>
@@ -608,7 +608,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="media-object center"> 
-                                                            <img src="../../img/av1.png" alt="" class="img-responsive img-rounded">
+                                                            <img src="<%=contextPath%>/img/av1.png" alt="" class="img-responsive img-rounded">
                                                         </div>
                                                     </td>
                                                     <td> Jacob Armstrong </td>
@@ -627,7 +627,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="media-object center"> 
-                                                            <img src="../../img/av1.png" alt="" class="img-responsive img-rounded">
+                                                            <img src="<%=contextPath%>/img/av1.png" alt="" class="img-responsive img-rounded">
                                                         </div>
                                                     </td>
                                                     <td> Sandra Smith </td>
@@ -646,7 +646,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="media-object center"> 
-                                                            <img src="../../img/av1.png" alt="" class="img-responsive img-rounded">
+                                                            <img src="<%=contextPath%>/img/av1.png" alt="" class="img-responsive img-rounded">
                                                         </div>
                                                     </td>
                                                     <td> Sandra </td>
@@ -949,7 +949,7 @@
                                                                     </div>
                                                                 </td>
                                                                 <td>
-                                                                    <div class="media-object center"> <img src="../../img/av1.png" alt="" class="img-rounded img-sm"> </div>
+                                                                    <div class="media-object center"> <img src="<%=contextPath%>/img/av1.png" alt="" class="img-rounded img-sm"> </div>
                                                                 </td>
                                                                 <td> Semantha Armstrong </td>
                                                                 <td class="hidden-xs">3 Jan, 2013</td>
@@ -986,7 +986,7 @@
                                                                     </div>
                                                                 </td>
                                                                 <td>
-                                                                    <div class="media-object center"> <img src="../../img/av1.png" alt="" class="img-rounded img-sm"> </div>
+                                                                    <div class="media-object center"> <img src="<%=contextPath%>/img/av1.png" alt="" class="img-rounded img-sm"> </div>
                                                                 </td>
                                                                 <td> Jonathan Smith </td>
                                                                 <td class="hidden-xs">3 Jan, 2013</td>
@@ -1023,7 +1023,7 @@
                                                                     </div>
                                                                 </td>
                                                                 <td>
-                                                                    <div class="media-object center"> <img src="../../img/av1.png" alt="" class="img-rounded img-sm"> </div>
+                                                                    <div class="media-object center"> <img src="<%=contextPath%>/img/av1.png" alt="" class="img-rounded img-sm"> </div>
                                                                 </td>
                                                                 <td> Jacob Armstrong </td>
                                                                 <td class="hidden-xs">3 Jan, 2013</td>
@@ -1060,7 +1060,7 @@
                                                                     </div>
                                                                 </td>
                                                                 <td>
-                                                                    <div class="media-object center"> <img src="../../img/av1.png" alt="" class="img-rounded img-sm"> </div>
+                                                                    <div class="media-object center"> <img src="<%=contextPath%>/img/av1.png" alt="" class="img-rounded img-sm"> </div>
                                                                 </td>
                                                                 <td> Sandra Smith </td>
                                                                 <td class="hidden-xs">3 Jan, 2013</td>
@@ -1097,7 +1097,7 @@
                                                                     </div>
                                                                 </td>
                                                                 <td>
-                                                                    <div class="media-object center"> <img src="../../img/av1.png" alt="" class="img-rounded img-sm"> </div>
+                                                                    <div class="media-object center"> <img src="<%=contextPath%>/img/av1.png" alt="" class="img-rounded img-sm"> </div>
                                                                 </td>
                                                                 <td> Sandra </td>
                                                                 <td class="hidden-xs">3 Jan, 2013</td>
@@ -1165,9 +1165,230 @@
                                             </a>
                                             <!--Submenu-->
                                             <ul class="collapse">
-                                                <li><a href="index.jsp"><i class="fa fa-caret-right"></i> Homepage V1</a></li>
+                                                <li><a href="index.html"><i class="fa fa-caret-right"></i> Homepage V1</a></li>
                                                 <li><a href="dashboard-v2.html"><i class="fa fa-caret-right"></i> Homepage V2</a></li>
                                                 <li><a href="index.jsp"><i class="fa fa-caret-right"></i> Homepage V3</a></li>
+                                            </ul>
+                                        </li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="menu-title">E-commerce</span>
+                                            <i class="arrow"></i>
+                                            </a>
+                                            <!--Submenu-->
+                                            <ul class="collapse">
+                                                <li><a href="ecommerce.html"><i class="fa fa-caret-right"></i> Dashboard</a></li>
+                                                <li><a href="ecommerce-order.html"><i class="fa fa-caret-right"></i> Order </a></li>
+                                                <li><a href="ecommerce-orderview.html"><i class="fa fa-caret-right"></i> Orders View</a></li>
+                                                <li><a href="ecommerce-products.html"><i class="fa fa-caret-right"></i> Product List </a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-divider"></li>
+                                        <!--Category name-->
+                                        <li class="list-header">Components</li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-th"></i>
+                                            <span class="menu-title">
+                                            <strong>Layouts</strong>
+                                            </span>
+                                            <i class="arrow"></i>
+                                            </a>
+                                            <!--Submenu-->
+                                            <ul class="collapse">
+                                                <li><a href="layout-blank.html"><i class="fa fa-caret-right"></i> Blank Page </a></li>
+                                                <li><a href="layout-boxed.html"><i class="fa fa-caret-right"></i> Boxed Version </a></li>
+                                                <li><a href="layout-collapsed-sidebar.html"><i class="fa fa-caret-right"></i> Collapsed Sidebar </a></li>
+                                                <li><a href="layout-push-menu.html"><i class="fa fa-caret-right"></i> Push Menu </a></li>
+                                                <li><a href="layout-slide-menu.html"><i class="fa fa-caret-right"></i> Slide Menu </a></li>
+                                                <li><a href="layout-horizontal-menu.html"><i class="fa fa-caret-right"></i> Horizontal Menu </a></li>
+                                                <li><a href="layout-horizontal-menu-boxed.html"><i class="fa fa-caret-right"></i> Boxed Horizontal </a></li>
+                                                <li><a href="layout-blank.html"><i class="fa fa-caret-right"></i> Apps layout V1 </a></li>
+                                                <li><a href="layout-app-v2.html"><i class="fa fa-caret-right"></i> Apps layout V2 </a></li>
+                                                <li><a href="layout-blank.html"><i class="fa fa-caret-right"></i> Full Width </a></li>
+                                            </ul>
+                                        </li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-briefcase"></i>
+                                            <span class="menu-title">UI Elements</span>
+                                            <i class="arrow"></i>
+                                            </a>
+                                            <!--Submenu-->
+                                            <ul class="collapse">
+                                                <li><a href="ui-animation.html"><i class="fa fa-caret-right"></i> CSS3 Animation </a></li>
+                                                <li><a href="ui-panel.html"><i class="fa fa-caret-right"></i> Panel </a></li>
+                                                <li><a href="ui-xeditable.html"><i class="fa fa-caret-right"></i> Xeditable </a></li>
+                                                <li><a href="ui-button.html"><i class="fa fa-caret-right"></i> Buttons </a></li>
+                                                <li><a href="ui-fontawesome.html"><i class="fa fa-caret-right"></i> Fontawesome </a></li>
+                                                <li><a href="ui-icons.html"><i class="fa fa-caret-right"></i> Icons </a></li>
+                                                <li><a href="ui-components.html"><i class="fa fa-caret-right"></i> Components </a></li>
+                                                <li><a href="ui-widgets.html"><i class="fa fa-caret-right"></i> Widgets </a></li>
+                                                <li><a href="ui-timeline.html"><i class="fa fa-caret-right"></i> Timeline </a></li>
+                                                <li><a href="ui-nested-lists.html"><i class="fa fa-caret-right"></i> Nested Lists </a></li>
+                                                <li><a href="ui-grids.html"><i class="fa fa-caret-right"></i> Grids </a></li>
+                                                <li><a href="ui-tab.html"><i class="fa fa-caret-right"></i> Tab </a></li>
+                                                <li><a href="ui-accordions.html"><i class="fa fa-caret-right"></i> Accordions </a></li>
+                                                <li><a href="ui-dragdrop.html"><i class="fa fa-caret-right"></i> Draggable Panel</a></li>
+                                                <li><a href="ui-typography.html"><i class="fa fa-caret-right"></i> Typography </a></li>
+                                            </ul>
+                                        </li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-file"></i>
+                                            <span class="menu-title">Pages</span>
+                                            <i class="arrow"></i>
+                                            </a>
+                                            <!--Submenu-->
+                                            <ul class="collapse">
+                                                <li><a href="pages-faq.html"><i class="fa fa-caret-right"></i> FAQ </a></li>
+                                                <li><a href="pages-gallery.html"><i class="fa fa-caret-right"></i> Gallery </a></li>
+                                                <li><a href="pages-directory.html"><i class="fa fa-caret-right"></i> Directory </a></li>
+                                                <li><a href="pages-profile.html"><i class="fa fa-caret-right"></i> User Profile </a></li>
+                                                <li><a href="pages-invoice.html"><i class="fa fa-caret-right"></i> Invoice </a></li>
+                                                <li><a href="pages-login.html"><i class="fa fa-caret-right"></i> Login </a></li>
+                                                <li><a href="pages-register.html"><i class="fa fa-caret-right"></i> Register </a></li>
+                                                <li><a href="pages-password-reminder.html"><i class="fa fa-caret-right"></i> Password Reminder </a></li>
+                                                <li><a href="pages-lock-screen.html"><i class="fa fa-caret-right"></i> Lock Screen </a></li>
+                                                <li><a href="pages-404.html"><i class="fa fa-caret-right"></i> 404 Error </a></li>
+                                                <li><a href="pages-500.html"><i class="fa fa-caret-right"></i> 500 Error </a></li>
+                                            </ul>
+                                        </li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-table"></i>
+                                            <span class="menu-title">Tables</span>
+                                            <i class="arrow"></i>
+                                            </a>
+                                            <!--Submenu-->
+                                            <ul class="collapse">
+                                                <li><a href="table-static.html"><i class="fa fa-caret-right"></i> Static Table <span class="label label-info pull-right">New</span></a></li>
+                                                <li><a href="table-datatable.html"><i class="fa fa-caret-right"></i> Datatable Table </a></li>
+                                                <li><a href="table-footable.html"><i class="fa fa-caret-right"></i> Footable Table </a></li>
+                                            </ul>
+                                        </li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-edit"></i>
+                                            <span class="menu-title">Forms</span>
+                                            <i class="arrow"></i>
+                                            </a>
+                                            <!--Submenu-->
+                                            <ul class="collapse">
+                                                <li><a href="forms-layout.html"><i class="fa fa-caret-right"></i> Form Layout </a></li>
+                                                <li><a href="forms-switchery.html"><i class="fa fa-caret-right"></i> Form Switchery </a></li>
+                                                <li><a href="forms-components.html"><i class="fa fa-caret-right"></i> Form Components </a></li>
+                                                <li><a href="forms-validation.html"><i class="fa fa-caret-right"></i> Form Validation </a></li>
+                                                <li><a href="forms-wizard.html"><i class="fa fa-caret-right"></i> Form Wizard </a></li>
+                                            </ul>
+                                        </li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-line-chart"></i>
+                                            <span class="menu-title">Charts</span>
+                                            <i class="arrow"></i>
+                                            </a>
+                                            <!--Submenu-->
+                                            <ul class="collapse">
+                                                <li><a href="charts-flot.html"><i class="fa fa-caret-right"></i> Flot Chart </a></li>
+                                                <li><a href="charts-morris.html"><i class="fa fa-caret-right"></i> Morris Chart </a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-divider"></li>
+                                        <!--Category name-->
+                                        <li class="list-header">Extra</li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="calendar.html">
+                                            <i class="fa fa-calendar"></i>
+                                            <span class="menu-title">
+                                            Calendar
+                                            </span>
+                                            </a>
+                                        </li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="ui-widgets.html">
+                                            <i class="fa fa-flask"></i>
+                                            <span class="menu-title">
+                                            <strong>Widgets</strong>
+                                            <span class="label label-pink pull-right">New</span>
+                                            </span>
+                                            </a>
+                                        </li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-envelope-o"></i>
+                                            <span class="menu-title">Mail</span>
+                                            <i class="arrow"></i>
+                                            </a>
+                                            <!--Submenu-->
+                                            <ul class="collapse">
+                                                <li><a href="mail-inbox.html"><i class="fa fa-caret-right"></i> Inbox </a></li>
+                                                <li><a href="mail-compose.html"><i class="fa fa-caret-right"></i> Compose </a></li>
+                                                <li><a href="mail-mailview.html"><i class="fa fa-caret-right"></i> Mail View </a></li>
+                                            </ul>
+                                        </li>
+                                        <!--Menu list item-->
+
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-map-marker"></i>
+                                            <span class="menu-title">
+                                            Maps
+                                            <span class="label label-mint pull-right">New</span>
+                                            </span>
+                                            </a>
+                                            <!--Submenu-->
+                                            <ul class="collapse">
+                                                <li><a href="maps-gmap.html">Google Maps</a></li>
+                                                <li><a href="maps-vectormap.html">Vector Maps</a></li>
+                                            </ul>
+                                        </li>
+                                        <!--Menu list item-->
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-plus-square"></i>
+                                            <span class="menu-title">Menu Level</span>
+                                            <i class="arrow"></i>
+                                            </a>
+                                            <!--Submenu-->
+                                            <ul class="collapse">
+                                                <li><a href="#"><i class="fa fa-caret-right"></i> Second Level Item</a></li>
+                                                <li><a href="#"><i class="fa fa-caret-right"></i> Second Level Item</a></li>
+                                                <li><a href="#"><i class="fa fa-caret-right"></i> Second Level Item</a></li>
+                                                <li class="list-divider"></li>
+                                                <li>
+                                                    <a href="#">Third Level<i class="arrow"></i></a>
+                                                    <!--Submenu-->
+                                                    <ul class="collapse">
+                                                        <li><a href="#"><i class="fa fa-caret-right"></i> Third Level Item</a></li>
+                                                        <li><a href="#"><i class="fa fa-caret-right"></i> Third Level Item</a></li>
+                                                        <li><a href="#"><i class="fa fa-caret-right"></i> Third Level Item</a></li>
+                                                        <li><a href="#"><i class="fa fa-caret-right"></i> Third Level Item</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Third Level<i class="arrow"></i></a>
+                                                    <!--Submenu-->
+                                                    <ul class="collapse">
+                                                        <li><a href="#"><i class="fa fa-caret-right"></i> Third Level Item</a></li>
+                                                        <li><a href="#"><i class="fa fa-caret-right"></i> Third Level Item</a></li>
+                                                        <li><a href="#"><i class="fa fa-caret-right"></i> Third Level Item</a></li>
+                                                        <li class="list-divider"></li>
+                                                        <li><a href="#"><i class="fa fa-caret-right"></i> Third Level Item</a></li>
+                                                        <li><a href="#"><i class="fa fa-caret-right"></i> Third Level Item</a></li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -1244,7 +1465,7 @@
                                         <div class="list-group bg-trans">
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av1.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av1.png" alt="" class="img-sm">
                                                 <i class="on bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block">
@@ -1254,7 +1475,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av2.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av2.png" alt="" class="img-sm">
                                                 <i class="on bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block pad-ver-5">
@@ -1264,7 +1485,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av3.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av3.png" alt="" class="img-sm">
                                                 <i class="on bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block">
@@ -1274,7 +1495,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av7.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av7.png" alt="" class="img-sm">
                                                 <i class="on bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block">
@@ -1284,7 +1505,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av4.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av4.png" alt="" class="img-sm">
                                                 <i class="on bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block">
@@ -1294,7 +1515,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av5.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av5.png" alt="" class="img-sm">
                                                 <i class="on bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block">
@@ -1308,7 +1529,7 @@
                                         <div class="list-group bg-trans">
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av1.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av1.png" alt="" class="img-sm">
                                                 <i class="busy bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block">
@@ -1318,7 +1539,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av2.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av2.png" alt="" class="img-sm">
                                                 <i class="busy bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block">
@@ -1328,7 +1549,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av3.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av3.png" alt="" class="img-sm">
                                                 <i class="busy bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block">
@@ -1338,7 +1559,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av7.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av7.png" alt="" class="img-sm">
                                                 <i class="busy bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block">
@@ -1352,7 +1573,7 @@
                                         <div class="list-group bg-trans">
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av1.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av1.png" alt="" class="img-sm">
                                                 <i class="off bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block pad-ver-5">
@@ -1362,7 +1583,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av2.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av2.png" alt="" class="img-sm">
                                                 <i class="off bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block pad-ver-5">
@@ -1372,7 +1593,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av3.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av3.png" alt="" class="img-sm">
                                                 <i class="off bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block pad-ver-5">
@@ -1382,7 +1603,7 @@
                                             </div>
                                             <div class="list-group-item">
                                                 <div class="pull-left avatar mar-rgt">
-                                                <img src="../../img/av7.png" alt="" class="img-sm">
+                                                <img src="<%=contextPath%>/img/av7.png" alt="" class="img-sm">
                                                 <i class="off bottom text-light"></i>
                                                 </div>
                                                 <div class="inline-block">
@@ -1520,49 +1741,49 @@
         <!--JAVASCRIPT-->
         <!--=================================================-->
         <!--jQuery [ REQUIRED ]-->
-        <script src="../../js/jquery-2.1.1.min.js"></script>
+        <script src="<%=contextPath%>/js/jquery-2.1.1.min.js"></script>
         <!--BootstrapJS [ RECOMMENDED ]-->
-        <script src="../../js/bootstrap.min.js"></script>
+        <script src="<%=contextPath%>/js/bootstrap.min.js"></script>
         <!--Fast Click [ OPTIONAL ]-->
-        <script src="../../plugins/fast-click/fastclick.min.js"></script>
+        <script src="<%=contextPath%>/plugins/fast-click/fastclick.min.js"></script>
         <!--Jasmine Admin [ RECOMMENDED ]-->
-        <script src="../../js/scripts.js"></script>
+        <script src="<%=contextPath%>/js/scripts.js"></script>
         <!--Switchery [ OPTIONAL ]-->
-        <script src="../../plugins/switchery/switchery.min.js"></script>
+        <script src="<%=contextPath%>/plugins/switchery/switchery.min.js"></script>
         <!--Jquery Steps [ OPTIONAL ]-->
-        <script src="../../plugins/parsley/parsley.min.js"></script>
+        <script src="<%=contextPath%>/plugins/parsley/parsley.min.js"></script>
         <!--Jquery Steps [ OPTIONAL ]-->
-        <script src="../../plugins/jquery-steps/jquery-steps.min.js"></script>
+        <script src="<%=contextPath%>/plugins/jquery-steps/jquery-steps.min.js"></script>
         <!--Bootstrap Select [ OPTIONAL ]-->
-        <script src="../../plugins/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="<%=contextPath%>/plugins/bootstrap-select/bootstrap-select.min.js"></script>
         <!--Bootstrap Wizard [ OPTIONAL ]-->
-        <script src="../../plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+        <script src="<%=contextPath%>/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
         <!--Masked Input [ OPTIONAL ]-->
-        <script src="../../plugins/masked-input/bootstrap-inputmask.min.js"></script>
+        <script src="<%=contextPath%>/plugins/masked-input/bootstrap-inputmask.min.js"></script>
         <!--Bootstrap Validator [ OPTIONAL ]-->
-        <script src="../../plugins/bootstrap-validator/bootstrapValidator.min.js"></script>
+        <script src="<%=contextPath%>/plugins/bootstrap-validator/bootstrapValidator.min.js"></script>
         <!--Easy Pie Chart [ OPTIONAL ]-->
-        <script src="../../plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="<%=contextPath%>/plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
         <!--jvectormap [ OPTIONAL ]-->
-        <script src="../../plugins/jvectormap/jquery-jvectormap.min.js"></script>
-        <script src="../../plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
-        <script src="../../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap.min.js"></script>
+        <script src="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+        <script src="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
         <!--Flot Chart [ OPTIONAL ]-->
-        <script src="../../plugins/flot-charts/jquery.flot.min.js"></script>
-        <script src="../../plugins/flot-charts/jquery.flot.resize.min.js"></script>
+        <script src="<%=contextPath%>/plugins/flot-charts/jquery.flot.min.js"></script>
+        <script src="<%=contextPath%>/plugins/flot-charts/jquery.flot.resize.min.js"></script>
         <!--Flot Order Bars Chart [ OPTIONAL ]-->
-        <script src="../../plugins/flot-charts/jquery.flot.categories.js"></script>
+        <script src="<%=contextPath%>/plugins/flot-charts/jquery.flot.categories.js"></script>
         <!--FooTable [ OPTIONAL ]-->
-        <script src="../../plugins/fooTable/dist/footable.all.min.js"></script>
+        <script src="<%=contextPath%>/plugins/fooTable/dist/footable.all.min.js"></script>
         <!--Fullscreen jQuery [ OPTIONAL ]-->
-        <script src="../../plugins/screenfull/screenfull.js"></script>
+        <script src="<%=contextPath%>/plugins/screenfull/screenfull.js"></script>
         <!--Form Wizard [ SAMPLE ]-->
-        <script src="../../js/demo/dashboard-v3.js"></script>
+        <script src="<%=contextPath%>/js/demo/dashboard-v3.js"></script>
         <!--Form Wizard [ SAMPLE ]-->
-        <script src="../../js/demo/wizard.js"></script>
+        <script src="<%=contextPath%>/js/demo/wizard.js"></script>
         <!--Demo script [ DEMONSTRATION ]-->
-        <script src="../../js/demo/jasmine.js"></script>
+        <script src="<%=contextPath%>/js/demo/jasmine.js"></script>
         <!--Form Wizard [ SAMPLE ]-->
-        <script src="../../js/demo/form-wizard.js"></script>
+        <script src="<%=contextPath%>/js/demo/form-wizard.js"></script>
     </body>
 </html>
