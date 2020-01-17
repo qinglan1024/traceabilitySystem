@@ -5,7 +5,7 @@
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Homepage | SensationApp - Responsive admin template.</title>
+        <title> SensationApp - Responsive admin template.</title>
         <link rel="shortcut icon" href="<%=contextPath%>/img/favicon.ico">
         <!--STYLESHEET-->
         <!--=================================================-->
@@ -22,10 +22,10 @@
         <link href="<%=contextPath%>/plugins/switchery/switchery.min.css" rel="stylesheet">
         <!--Bootstrap Select [ OPTIONAL ]-->
         <link href="<%=contextPath%>/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
-        <!--Switchery [ OPTIONAL ]-->
-        <link href="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap.css" rel="stylesheet">
         <!--Bootstrap Validator [ OPTIONAL ]-->
         <link href="<%=contextPath%>/plugins/bootstrap-validator/bootstrapValidator.min.css" rel="stylesheet">
+        <!--jVector Map [ OPTIONAL ]-->
+        <link href="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap.css" rel="stylesheet">
         <!--Demo [ DEMONSTRATION ]-->
         <link href="<%=contextPath%>/css/demo/jquery-steps.min.css" rel="stylesheet">
         <!--Demo [ DEMONSTRATION ]-->
@@ -47,10 +47,10 @@
                     <!--Brand logo & name-->
                     <!--================================-->
                     <div class="navbar-header">
-                        <a href="index.html" class="navbar-brand">
+                        <a href="index.jsp" class="navbar-brand">
                             <i class="fa fa-cube brand-icon"></i>
                             <div class="brand-title">
-                                <span class="brand-text">SensationApp</span>
+                                <span class="brand-text">聚控云溯源系统</span>
                             </div>
                         </a>
                     </div>
@@ -67,13 +67,15 @@
                             </li>
                             <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                             <!--End Navigation toogle button-->
+                            
                             <!--Profile toogle button-->
                             <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                            <li id="profilebtn" class="hidden-xs">
-                                <a href="JavaScript:void(0);"> <i class="fa fa-user fa-lg"></i> </a>
-                            </li>
+                               <li id="profilebtn" class="hidden-xs">
+                                  <a href="JavaScript:void(0);"> <i class="fa fa-user fa-lg"></i> </a>
+                               </li>
                             <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                             <!--End Profile toogle button-->
+
                             <!--Messages Dropdown-->
                             <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                             <li class="dropdown">
@@ -82,7 +84,7 @@
                                 <!--Message dropdown menu-->
                                 <div class="dropdown-menu dropdown-menu-md with-arrow">
                                     <div class="pad-all bord-btm">
-                                        <div class="h4 text-muted text-thin mar-no">You have 3 messages.</div>
+                                       <div class="h4 text-muted text-thin mar-no">You have 3 messages.</div>
                                     </div>
                                     <div class="nano scrollable">
                                         <div class="nano-content">
@@ -165,7 +167,7 @@
                                 <!--Notification dropdown menu-->
                                 <div class="dropdown-menu dropdown-menu-md with-arrow">
                                     <div class="pad-all bord-btm">
-                                       <div class="h4 text-muted text-thin mar-no"> Notification </div>
+                                      <div class="h4 text-muted text-thin mar-no"> Notification </div>
                                     </div>
                                     <div class="nano scrollable">
                                         <div class="nano-content">
@@ -235,25 +237,27 @@
                             <!--End notifications dropdown-->
                         </ul>
                         <ul class="nav navbar-top-links pull-right">
-                            <!--Profile toogle button-->
+
+                            <!--Fullscreen toogle button-->
                             <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                            <li class="hidden-xs" id="toggleFullscreen">
+                              <li class="hidden-xs" id="toggleFullscreen">
                                 <a class="icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
-                                <span class="sr-only">Toggle fullscreen</span>
+                                   <span class="sr-only">Toggle fullscreen</span>
                                 </a>
-                            </li>
+                              </li>
                             <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                            <!--End Profile toogle button-->
+                            <!--End Fullscreen toogle button-->
+
                             <!--Language selector-->
                             <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                             <li class="dropdown">
-                                <a id="demo-lang-switch" class="lang-selector dropdown-toggle" href="#" data-toggle="dropdown"> <span class="lang-selected"> <img class="lang-flag" src="<%=contextPath%>/img/flags/united-kingdom.png" alt="English"> <span class="lang-id">EN</span> <span class="lang-name">English</span> </span>
+                                <a id="demo-lang-switch" class="lang-selector dropdown-toggle" href="#" data-toggle="dropdown"> <span class="lang-selected"> <img class="lang-flag" src="<%=contextPath%>/img/flags/china.png" alt="Chinese"> <span class="lang-id">CN</span> <span class="lang-name">Chinese</span> </span>
                                 </a>
                                 <!--Language selector menu-->
                                 <ul class="head-list dropdown-menu with-arrow">
                                     <li>
                                         <!--English-->
-                                        <a href="#" class="active"> <img class="lang-flag" src="<%=contextPath%>/img/flags/united-kingdom.png" alt="English"> <span class="lang-id">EN</span> <span class="lang-name">English</span> </a>
+                                        <a href="#" class="active"> <img class="lang-flag" src="<%=contextPath%>/img/flags/united-kingdom.png" alt="English"> <span class="lang-id">EN</span> <span class="lang-name">Chinese</span> </a>
                                     </li>
                                     <li>
                                         <!--France-->
@@ -323,93 +327,81 @@
                 <!--CONTENT CONTAINER-->
                 <!--===================================================-->
                 <div id="content-container">
-                    <div id="profilebody">
-                        <div class="pad-all animated fadeInDown">
-                            <div class="row">
-                                <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
-                                    <div class="panel panel-default mar-no">
-                                        <div class="panel-body">
-                                            <a href="JavaScript:void(0);">
-                                                <div class="pull-left">
-                                                    <p class="profile-title text-bricky">Users</p>
-                                                </div>
-                                                <div class="pull-right text-bricky"> <i class="fa fa-users fa-4x"></i> </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
-                                    <div class="panel panel-default mar-no">
-                                        <div class="panel-body">
-                                            <a href="JavaScript:void(0);">
-                                                <div class="pull-left">
-                                                    <p class="profile-title text-bricky">Inbox</p>
-                                                </div>
-                                                <div class="pull-right text-bricky"> <i class="fa fa-envelope fa-4x"></i> </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
-                                    <div class="panel panel-default mar-no">
-                                        <div class="panel-body">
-                                            <a href="JavaScript:void(0);">
-                                                <div class="pull-left">
-                                                    <p class="profile-title text-bricky">FAQ</p>
-                                                </div>
-                                                <div class="pull-right text-bricky"> <i class="fa fa-headphones fa-4x"></i> </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
-                                    <div class="panel panel-default mar-no">
-                                        <div class="panel-body">
-                                            <a href="JavaScript:void(0);">
-                                                <div class="pull-left">
-                                                    <p class="profile-title text-bricky">Settings</p>
-                                                </div>
-                                                <div class="pull-right text-bricky"> <i class="fa fa-cogs fa-4x"></i> </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
-                                    <div class="panel panel-default mar-no">
-                                        <div class="panel-body">
-                                            <a href="JavaScript:void(0);">
-                                                <div class="pull-left">
-                                                    <p class="profile-title text-bricky">Calender</p>
-                                                </div>
-                                                <div class="pull-right text-bricky"> <i class="fa fa-calendar fa-4x"></i> </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
-                                    <div class="panel panel-default mar-no">
-                                        <div class="panel-body">
-                                            <a href="JavaScript:void(0);">
-                                                <div class="pull-left">
-                                                    <p class="profile-title text-bricky">Pictures</p>
-                                                </div>
-                                                <div class="pull-right text-bricky"> <i class="fa fa-picture-o fa-4x"></i> </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+              <div id="profilebody">
+                <div class="pad-all animated fadeInDown">
+                  <div class="row">
+                    <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
+                      <div class="panel panel-default mar-no">
+                        <div class="panel-body">
+                          <a href="JavaScript:void(0);">
+                            <div class="pull-left"> <p class="profile-title text-bricky">Users</p> </div>
+                            <div class="pull-right text-bricky"> <i class="fa fa-users fa-4x"></i> </div>
+                          </a> 
                         </div>
+                      </div>
                     </div>
+                    <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
+                      <div class="panel panel-default mar-no">
+                        <div class="panel-body">
+                          <a href="JavaScript:void(0);">
+                            <div class="pull-left"> <p class="profile-title text-bricky">Inbox</p> </div>
+                            <div class="pull-right text-bricky"> <i class="fa fa-envelope fa-4x"></i> </div>
+                          </a> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
+                      <div class="panel panel-default mar-no">
+                        <div class="panel-body">
+                          <a href="JavaScript:void(0);">
+                            <div class="pull-left"> <p class="profile-title text-bricky">FAQ</p> </div>
+                            <div class="pull-right text-bricky"> <i class="fa fa-headphones fa-4x"></i> </div>
+                          </a> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
+                      <div class="panel panel-default mar-no">
+                        <div class="panel-body">
+                          <a href="JavaScript:void(0);">
+                            <div class="pull-left"> <p class="profile-title text-bricky">Settings</p> </div>
+                            <div class="pull-right text-bricky"> <i class="fa fa-cogs fa-4x"></i> </div>
+                          </a> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
+                      <div class="panel panel-default mar-no">
+                        <div class="panel-body">
+                          <a href="JavaScript:void(0);">
+                            <div class="pull-left"> <p class="profile-title text-bricky">Calender</p> </div>
+                            <div class="pull-right text-bricky"> <i class="fa fa-calendar fa-4x"></i> </div>
+                          </a> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
+                      <div class="panel panel-default mar-no">
+                        <div class="panel-body">
+                          <a href="JavaScript:void(0);">
+                            <div class="pull-left"> <p class="profile-title text-bricky">Pictures</p> </div>
+                            <div class="pull-right text-bricky"> <i class="fa fa-picture-o fa-4x"></i> </div>
+                          </a> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
                     <!--Page Title-->
                     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                     <div class="pageheader">
-                        <h3><i class="fa fa-home"></i> Homepage 3 </h3>
+                        <h3><i class="fa fa-home"></i> Dashboard </h3>
                         <div class="breadcrumb-wrapper">
                             <span class="label">You are here:</span>
                             <ol class="breadcrumb">
                                 <li> <a href="#"> Home </a> </li>
-                                <li class="active"> Homepage 3 </li>
+                                <li class="active"> Dashboard </li>
                             </ol>
                         </div>
                     </div>
@@ -419,256 +411,8 @@
                     <!--===================================================-->
                     <div id="page-content">
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="panel">
-                                    <div class="panel-body text-center">
-                                        <ul class="list-inline nm">
-                                            <li class="left-easypiechart-data"> <span class="sell-percent">60%</span> <span>Direct Sell</span> </li>
-                                            <li>
-                                                <!--Easy Pie Chart-->
-                                                <!--===================================================-->
-                                                <div id="demo-pie-2" class="pie-title-center" data-percent="58"> <span class="pie-value text-thin"></span> </div>
-                                                <!--===================================================-->
-                                                <!-- End Easy Pie Chart -->
-                                            </li>
-                                            <li class="right-easypiechart-data"> <span class="sell-percent">40%</span> <span>Channel Sell</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="panel">
-                                    <div class="panel-body text-center">
-                                        <ul class="list-inline nm">
-                                            <li class="left-easypiechart-data"> <span class="sell-percent">60%</span> <span>Direct Sell</span> </li>
-                                            <li>
-                                                <!--Easy Pie Chart-->
-                                                <!--===================================================-->
-                                                <div id="demo-pie-3" class="pie-title-center" data-percent="35"> <span class="pie-value text-thin"></span> </div>
-                                                <!--===================================================-->
-                                                <!-- End Easy Pie Chart -->
-                                            </li>
-                                            <li class="right-easypiechart-data"> <span class="sell-percent">40%</span> <span>Channel Sell</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="panel">
-                                    <div class="panel-body text-center">
-                                        <ul class="list-inline nm">
-                                            <li class="left-easypiechart-data"> <span class="sell-percent">60%</span> <span>Direct Sell</span> </li>
-                                            <li>
-                                                <!--Easy Pie Chart-->
-                                                <!--===================================================-->
-                                                <div id="demo-pie-4" class="pie-title-center" data-percent="45"> <span class="pie-value text-thin"></span> </div>
-                                                <!--===================================================-->
-                                                <!-- End Easy Pie Chart -->
-                                            </li>
-                                            <li class="right-easypiechart-data"> <span class="sell-percent">40%</span> <span>Channel Sell</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title"> Order Statistics </h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="col-md-8">
-                                            <!-- World Map -->
-                                            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                                            <div id="world-map-markers" style="height: 300px"></div>
-                                            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                                        </div>
-                                        <div class="col-md-4">
-                                            <!-- Progress bars Start -->
-                                            <div class="clearfix"> 
-                                                <span class="pull-left">In Queue</span> 
-                                                <small class="pull-right">45%</small> 
-                                            </div>
-                                            <div class="pad-btm">
-                                                <div class="progress progress-striped progress-sm">
-                                                    <div class="progress-bar progress-bar-info" style="width: 55%;"></div>
-                                                </div>
-                                            </div>
-                                            <!-- Progress bars End -->                                
-                                            <!-- Progress bars Start -->
-                                            <div class="clearfix"> 
-                                                <span class="pull-left">Shipped Products</span> 
-                                                <small class="pull-right">350/500</small> 
-                                            </div>
-                                            <div class="pad-btm">
-                                                <div class="progress progress-striped progress-sm">
-                                                    <div class="progress-bar progress-bar-primary" style="width: 55%;"></div>
-                                                </div>
-                                            </div>
-                                            <!-- Progress bars End -->                                
-                                            <!-- Progress bars Start -->
-                                            <div class="clearfix"> 
-                                                <span class="pull-left">Returned Products</span> 
-                                                <small class="pull-right">50/500</small> 
-                                            </div>
-                                            <div class="pad-btm">
-                                                <div class="progress progress-striped progress-sm">
-                                                    <div class="progress-bar progress-bar-warning" style="width: 55%;"></div>
-                                                </div>
-                                            </div>
-                                            <!-- Progress bars End -->                                
-                                            <!-- Progress bars Start -->
-                                            <div class="clearfix"> 
-                                                <span class="pull-left">Pending Deliveries</span> 
-                                                <small class="pull-right">150/500</small> 
-                                            </div>
-                                            <div class="pad-btm">
-                                                <div class="progress progress-striped progress-sm">
-                                                    <div class="progress-bar progress-bar-danger" style="width: 55%;"></div>
-                                                </div>
-                                            </div>
-                                            <!-- Progress bars End -->                                
-                                            <!-- Progress bars Start -->
-                                            <div class="clearfix"> 
-                                                <span class="pull-left">Project 2</span> 
-                                                <small class="pull-right">32%</small> 
-                                            </div>
-                                            <div class="pad-btm">
-                                                <div class="progress progress-striped progress-sm">
-                                                    <div class="progress-bar progress-bar-info" style="width: 55%;"></div>
-                                                </div>
-                                            </div>
-                                            <!-- Progress bars End -->                                
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
+                            <div class="col-md-3">
                                 <div class="panel panel-default">
-                                    <div class="panel-body">
-                                        <!--Hover Rows-->
-                                        <!--===================================================-->
-                                        <table class="table table-hover table-vcenter">
-                                            <thead>
-                                                <tr>
-                                                    <th>&nbsp;</th>
-                                                    <th>Profile</th>
-                                                    <th>User ID</th>
-                                                    <th class="hidden-xs">Email Address</th>
-                                                    <th>Status</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <div class="checkbox">
-                                                            <label class="form-checkbox form-icon active">
-                                                            <input type="checkbox">
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="media-object center"> 
-                                                            <img src="<%=contextPath%>/img/av1.png" alt="" class="img-responsive img-rounded">
-                                                        </div>
-                                                    </td>
-                                                    <td> Semantha Armstrong </td>
-                                                    <td class="hidden-xs">semantha@gmail.com</td>
-                                                    <td>
-                                                        <div class="label label-table label-info">Block</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="checkbox">
-                                                            <label class="form-checkbox form-icon active">
-                                                            <input type="checkbox">
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="media-object center"> 
-                                                            <img src="<%=contextPath%>/img/av1.png" alt="" class="img-responsive img-rounded">
-                                                        </div>
-                                                    </td>
-                                                    <td> Jonathan Smith </td>
-                                                    <td class="hidden-xs">jonathan@gmail.com</td>
-                                                    <td>
-                                                        <div class="label label-table label-danger">On Hold</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="checkbox">
-                                                            <label class="form-checkbox form-icon active">
-                                                            <input type="checkbox">
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="media-object center"> 
-                                                            <img src="<%=contextPath%>/img/av1.png" alt="" class="img-responsive img-rounded">
-                                                        </div>
-                                                    </td>
-                                                    <td> Jacob Armstrong </td>
-                                                    <td class="hidden-xs">jacob@gmail.com</td>
-                                                    <td>
-                                                        <div class="label label-table label-success">Approved</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="checkbox">
-                                                            <label class="form-checkbox form-icon active">
-                                                            <input type="checkbox">
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="media-object center"> 
-                                                            <img src="<%=contextPath%>/img/av1.png" alt="" class="img-responsive img-rounded">
-                                                        </div>
-                                                    </td>
-                                                    <td> Sandra Smith </td>
-                                                    <td class="hidden-xs">Sandra@gmail.com</td>
-                                                    <td>
-                                                        <div class="label label-table label-warning">Pending</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="checkbox">
-                                                            <label class="form-checkbox form-icon active">
-                                                            <input type="checkbox">
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="media-object center"> 
-                                                            <img src="<%=contextPath%>/img/av1.png" alt="" class="img-responsive img-rounded">
-                                                        </div>
-                                                    </td>
-                                                    <td> Sandra </td>
-                                                    <td class="hidden-xs">Sandra@gmail.com</td>
-                                                    <td>
-                                                        <div class="label label-table label-warning">Pending</div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!--===================================================-->
-                                        <!--End Hover Rows-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title"> Sales Statistics </h3>
-                                    </div>
                                     <div class="panel-body">
                                         <!--Flot Line Chart placeholder-->
                                         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -676,464 +420,647 @@
                                         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title"> Earning Statistics </h3>
-                                    </div>
+                                <div class="panel panel-default">
                                     <div class="panel-body">
-                                        <!--Flot Line Chart placeholder-->
+                                        <!--Flot Bar Chart placeholder -->
                                         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                                        <div id="demo-earning-statistics" style="height:150px"></div>
+                                        <div id="demo-singlebar" style="height:150px;"></div>
                                         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-md-6">
                                 <div class="panel">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title"> Sales Statistics </h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <!--Flot Line Chart placeholder-->
-                                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                                        <div id="demo-realtime" style="height:150px"></div>
-                                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                                   <div class="panel-body">
+                                       <div class="col-md-6">
+                                            <!-- World Map -->
+                                            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                                            <div id="usa-map-markers" style="height: 200px"></div>
+                                            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                                       </div>
+                                        <div class="col-md-6">
+                                            <div class="panel">
+                                                <div class="panel-body text-center">
+                                                    <p>THIS MONTH TOTAL ORDER ($)</p>
+                                                    <div class="h4 text-primary"> $6,84,545 </div>
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <ul class="nav nav-section nav-justified">
+                                                        <li>
+                                                            <div class="section pad-no">
+                                                                <div class="h4 text-pink text-bold"> 2541 </div>
+                                                                <p> New York </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="section">
+                                                                <div class="h4 text-azure text-bold"> 12560 </div>
+                                                                <p> Montana </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="section">
+                                                                <div class="h4 text-mint text-bold"> 5461 </div>
+                                                                <p> Texas </p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bars Start -->
+                                        <div class="col-sm-6 pad-ver-10">
+                                            <div class="clearfix"> <span class="pull-left">New York</span> <small class="pull-right">72%</small> </div>
+                                            <div class="progress progress-striped progress-sm">
+                                                <div class="progress-bar progress-bar-info" style="width: 55%;"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bars End --> 
+                                        <!-- Progress bars Start -->
+                                        <div class="col-sm-6 pad-ver-10">
+                                            <div class="clearfix"> <span class="pull-left"> Montana </span> <small class="pull-right">68%</small> </div>
+                                            <div class="progress progress-striped progress-sm">
+                                                <div class="progress-bar progress-bar-info" style="width: 68%;"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bars End --> 
+                                        <!-- Progress bars Start -->
+                                        <div class="col-sm-6 pad-ver-10">
+                                            <div class="clearfix"> <span class="pull-left"> Texas </span> <small class="pull-right">58%</small> </div>
+                                            <div class="progress progress-striped progress-sm">
+                                                <div class="progress-bar progress-bar-info" style="width: 58%;"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bars End --> 
+                                        <!-- Progress bars Start -->
+                                        <div class="col-sm-6 pad-ver-10">
+                                            <div class="clearfix"> <span class="pull-left"> Nevada </span> <small class="pull-right">75%</small> </div>
+                                            <div class="progress progress-striped progress-sm">
+                                                <div class="progress-bar progress-bar-info" style="width: 75%;"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bars End --> 
+                                        <!-- Progress bars Start -->
+                                        <div class="col-sm-6 pad-ver-10">
+                                            <div class="clearfix"> <span class="pull-left"> New Jersey </span> <small class="pull-right">45%</small> </div>
+                                            <div class="progress progress-striped progress-sm">
+                                                <div class="progress-bar progress-bar-info" style="width: 45%;"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bars End --> 
+                                        <!-- Progress bars Start -->
+                                        <div class="col-sm-6 pad-ver-10">
+                                            <div class="clearfix"> <span class="pull-left"> California </span> <small class="pull-right">30%</small> </div>
+                                            <div class="progress progress-striped progress-sm">
+                                                <div class="progress-bar progress-bar-info" style="width: 30%;"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bars End --> 
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="text-center">
+                                            <!--Easy Pie Chart--> 
+                                            <!--===================================================-->
+                                            <div id="demo-pie-2" class="pie-title-center" data-percent="45"> <span class="pie-value text-thin"></span> </div>
+                                            <!--===================================================--> 
+                                            <!-- End Easy Pie Chart --> 
+                                        </div>
+                                        <ul class="nav nav-section nav-justified">
+                                            <li>
+                                                <div class="section">
+                                                    <p class="text-muted">Direct Sell</p>
+                                                    <h4>60%</h4>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="section">
+                                                    <p class="text-muted">Channel Sell</p>
+                                                    <h4>40%</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="text-center">
+                                            <!--Easy Pie Chart--> 
+                                            <!--===================================================-->
+                                            <div id="demo-pie-3" class="pie-title-center" data-percent="75"> <span class="pie-value text-thin"></span> </div>
+                                            <!--===================================================--> 
+                                            <!-- End Easy Pie Chart --> 
+                                        </div>
+                                        <ul class="nav nav-section nav-justified">
+                                            <li>
+                                                <div class="section">
+                                                    <p class="text-muted">Direct Sell</p>
+                                                    <h4>60%</h4>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="section">
+                                                    <p class="text-muted">Channel Sell</p>
+                                                    <h4>40%</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="panel text-center">
+                                    <!--Profile Widget-->
+                                    <!--===================================================-->
+                                    <div class="panel-body bg-primary pad-ver">
+                                        <i class="fa fa-facebook fa-5x"></i>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <ul class="nav nav-section nav-justified">
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 12.5k </div>
+                                                    <p class="mar-no">Followers</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 1853 </div>
+                                                    <p class="mar-no">Following</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 3451 </div>
+                                                    <p class="mar-no">Tweets</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--===================================================-->
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="panel text-center">
+                                    <!--Profile Widget-->
+                                    <!--===================================================-->
+                                    <div class="panel-body bg-info pad-ver">
+                                        <i class="fa fa-twitter fa-5x"></i>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <ul class="nav nav-section nav-justified">
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 12.5k </div>
+                                                    <p class="mar-no">Followers</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 1853 </div>
+                                                    <p class="mar-no">Following</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 3451 </div>
+                                                    <p class="mar-no">Tweets</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--===================================================-->
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="panel text-center">
+                                    <!--Profile Widget-->
+                                    <!--===================================================-->
+                                    <div class="panel-body bg-warning pad-ver">
+                                        <i class="fa fa-dollar fa-5x"></i>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <ul class="nav nav-section nav-justified">
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 12.5k </div>
+                                                    <p class="mar-no">Followers</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 1853 </div>
+                                                    <p class="mar-no">Following</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 3451 </div>
+                                                    <p class="mar-no">Tweets</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--===================================================-->
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="panel text-center">
+                                    <!--Profile Widget-->
+                                    <!--===================================================-->
+                                    <div class="panel-body bg-danger pad-ver">
+                                        <i class="fa fa-comments-o fa-5x"></i>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <ul class="nav nav-section nav-justified">
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 12.5k </div>
+                                                    <p class="mar-no">Followers</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 1853 </div>
+                                                    <p class="mar-no">Following</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="section">
+                                                    <div class="h4 mar-ver-5"> 3451 </div>
+                                                    <p class="mar-no">Tweets</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--===================================================-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel defaultpanel">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">Monthly Statistics <small> based on the User Activities </small></div>
+                                    </div>
+                                    <div class="panel-body pad-no">
+                                        <!--Default Accordion--> 
+                                        <!--===================================================-->
+                                        <div class="panel-group accordion mar-no" id="statistics">
+                                            <div class="panel">
+                                                <!--Accordion title-->
+                                                <div class="panel-heading">
+                                                    <div class="panel-title"> 
+                                                        <a data-parent="#statistics" data-toggle="collapse" href="#statisticsone"> 
+                                                           <i class="fa fa-calendar"></i> Top Countries 
+                                                        </a> 
+                                                    </div>
+                                                </div>
+                                                <!--Accordion content-->
+                                                <div class="panel-collapse collapse in" id="statisticsone">
+                                                    <div class="panel-body">
+                                                        <table class="table mar-no">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Country</th>
+                                                                    <th>Unique User</th>
+                                                                    <th>Pageviews</th>
+                                                                    <th>Changes</th>
+                                                                    <th>New Vs. Return</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>USA</td>
+                                                                    <td>254152</td>
+                                                                    <td>635241</td>
+                                                                    <td>25%</td>
+                                                                    <td>
+                                                                        <div class="progress progress-striped progress-md">
+                                                                            <div style="width: 75%" class="progress-bar progress-bar-success">
+                                                                                <span class="sr-only">75% Complete (success)</span>
+                                                                            </div>
+                                                                            <div style="width: 25%" class="progress-bar progress-bar-info">
+                                                                                <span class="sr-only">25% Complete (warning)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>India</td>
+                                                                    <td>325614</td>
+                                                                    <td>524152</td>
+                                                                    <td>20%</td>
+                                                                    <td>
+                                                                        <div class="progress progress-striped progress-md">
+                                                                            <div style="width: 45%" class="progress-bar progress-bar-success">
+                                                                                <span class="sr-only">45% Complete (success)</span>
+                                                                            </div>
+                                                                            <div style="width: 55%" class="progress-bar progress-bar-info">
+                                                                                <span class="sr-only">55% Complete (warning)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>United kingdom</td>
+                                                                    <td>124563</td>
+                                                                    <td>654525</td>
+                                                                    <td>35%</td>
+                                                                    <td>
+                                                                        <div class="progress progress-striped progress-md">
+                                                                            <div style="width: 25%" class="progress-bar progress-bar-success">
+                                                                                <span class="sr-only">25% Complete (success)</span>
+                                                                            </div>
+                                                                            <div style="width: 75%" class="progress-bar progress-bar-info">
+                                                                                <span class="sr-only">75% Complete (warning)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Brazil</td>
+                                                                    <td>325412</td>
+                                                                    <td>456985</td>
+                                                                    <td>35%</td>
+                                                                    <td>
+                                                                        <div class="progress progress-striped progress-md">
+                                                                            <div style="width: 35%" class="progress-bar progress-bar-success">
+                                                                                <span class="sr-only">35% Complete (success)</span>
+                                                                            </div>
+                                                                            <div style="width: 65%" class="progress-bar progress-bar-info">
+                                                                                <span class="sr-only">65% Complete (warning)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel defaultpanel">
+                                                <!--Accordion title-->
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title"> 
+                                                        <a data-parent="#statistics" data-toggle="collapse" href="#statisticsTwo"> 
+                                                        <i class="fa fa-calendar"></i> Age Group </a> 
+                                                    </h4>
+                                                </div>
+                                                <!--Accordion content-->
+                                                <div class="panel-collapse collapse" id="statisticsTwo">
+                                                    <div class="panel-body">
+                                                        <table class="table mar-no">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="text-center">Gender</th>
+                                                                    <th>Unique User</th>
+                                                                    <th>Percentage</th>
+                                                                    <th class="text-center">Changes</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text-center text-azure"><i class="fa fa-male"></i></td>
+                                                                    <td>18 to 25 year old</td>
+                                                                    <td class="center">25%</td>
+                                                                    <td class="text-center"><i class="fa fa-caret-up text-success fa-2x"></i></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center text-azure"><i class="fa fa-male"></i></td>
+                                                                    <td>26 to 35 year old</td>
+                                                                    <td class="center">35%</td>
+                                                                    <td class="text-center"><i class="fa fa-caret-down text-danger fa-2x"></i></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center text-azure"><i class="fa fa-male"></i></td>
+                                                                    <td>36 to 45 year old</td>
+                                                                    <td class="center">45%</td>
+                                                                    <td class="text-center"><i class="fa fa-caret-up text-success fa-2x"></i></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center text-azure"><i class="fa fa-male"></i></td>
+                                                                    <td>46 to 55 year old</td>
+                                                                    <td class="center">40%</td>
+                                                                    <td class="text-center"><i class="fa fa-caret-up text-success fa-2x"></i></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--===================================================--> 
+                                        <!--End Default Accordion--> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <!--Panel with Header-->
+                                <!--===================================================-->
+                                <div class="panel">
+                                    <div class="panel-body">
+                                        <div id="carousel-example-vertical" class="carousel vertical slide" data-ride="carousel">
+                                            <div class="carousel-inner" role="listbox">
+                                                <div class="item active">
+                                                    <div class="ticker-headline">
+                                                        <div class="media">
+                                                            <span class="pull-left"><i class="fa fa-twitter fa-4x text-azure"></i></span>
+                                                            <div class="media-body">
+                                                                <div class="h4"><strong>Semantha Schwarz</strong> <small>1 hour ago</small></div>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id quam elementum odio tristique euismod. Suspendisse id nunc sed massa cursus efficitur. Praesent pulvinar malesuada metus fringilla euismod. Morbi sit amet tincidunt elit. Etiam semper bibendum mi, nec tempor sem pharetra sit amet...</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="ticker-headline">
+                                                        <div class="media">
+                                                            <span class="pull-left"><i class="fa fa-facebook fa-4x text-primary"></i></span>
+                                                            <div class="media-body">
+                                                                <div class="h4"><strong>Semantha Schwarz</strong> <small>1 hour ago</small></div>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id quam elementum odio tristique euismod. Suspendisse id nunc sed massa cursus efficitur. Praesent pulvinar malesuada metus fringilla euismod. Morbi sit amet tincidunt elit. Etiam semper bibendum mi, nec tempor sem pharetra sit amet...</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="ticker-headline">
+                                                        <div class="media">
+                                                            <span class="pull-left"><i class="fa fa-google-plus fa-4x text-danger"></i></span>
+                                                            <div class="media-body">
+                                                                <div class="h4"><strong>Semantha Schwarz</strong> <small>1 hour ago</small></div>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id quam elementum odio tristique euismod. Suspendisse id nunc sed massa cursus efficitur. Praesent pulvinar malesuada metus fringilla euismod. Morbi sit amet tincidunt elit. Etiam semper bibendum mi, nec tempor sem pharetra sit amet...</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Controls -->
+                                            <a class="up carousel-control" href="#carousel-example-vertical" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="down carousel-control" href="#carousel-example-vertical" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--===================================================-->
+                                <!--End Panel with Header-->
+                                <!--Panel with Header-->
+                                <!--===================================================-->
+                                <div class="panel papernote">
+                                    <div class="panel-body">
+                                        <div class="carousel slide" id="c-slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="item active">
+                                                    <h4>This is my note #1</h4>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id quam elementum odio tristique euismod.
+                                                       Suspendisse id nunc sed massa cursus efficitur. Praesent pulvinar malesuada metus fringilla euismod. Morbi sit amet tincidunt elit. </p>
+                                                </div>
+                                                <div class="item">
+                                                    <h4>This is my note #2</h4>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id quam elementum odio tristique euismod.
+                                                       Suspendisse id nunc sed massa cursus efficitur. Praesent pulvinar malesuada metus fringilla euismod. Morbi sit amet tincidunt elit. </p>
+                                                </div>
+                                                <div class="item">
+                                                    <h4>This is my note #3</h4>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id quam elementum odio tristique euismod.
+                                                       Suspendisse id nunc sed massa cursus efficitur. Praesent pulvinar malesuada metus fringilla euismod. Morbi sit amet tincidunt elit. </p>
+                                                </div>
+                                            </div>
+                                            <!--
+                                                <a class="left carousel-control" href="#c-slide" data-slide="prev">
+                                                    <span class="fa fa-angle-left fa-2x"></span>
+                                                </a>
+                                                <a class="right carousel-control" href="#c-slide" data-slide="next">
+                                                    <span class="fa fa-angle-right fa-2x"></span>
+                                                </a>
+                                                -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--===================================================-->
+                                <!--End Panel with Header-->
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="panel">
                                     <div class="panel-heading">
-                                        <h3 class="panel-title"> Order List </h3>
+                                        <h3 class="panel-title"> General Table </h3>
                                     </div>
                                     <div class="panel-body">
-                                        <!--Default Tabs (Left Aligned)--> 
+                                        <!--Hover Rows--> 
                                         <!--===================================================-->
-                                        <div class="tab-base">
-                                            <!--Nav Tabs-->
-                                            <ul class="nav nav-tabs">
-                                                <li class="active"> <a data-toggle="tab" href="#demo-lft-tab-1"> Top Selling </a> </li>
-                                                <li> <a data-toggle="tab" href="#demo-lft-tab-2">Most Viewed</a> </li>
-                                                <li> <a data-toggle="tab" href="#demo-lft-tab-3">Recent Orders</a> </li>
-                                            </ul>
-                                            <!--Tabs Content-->
-                                            <div class="tab-content">
-                                                <div id="demo-lft-tab-1" class="tab-pane fade active in">
-                                                    <!--Hover Rows--> 
-                                                    <!--===================================================-->
-                                                    <table class="table table-hover table-vcenter">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>#</th>
-                                                                <th>Project</th>
-                                                                <th>Project Deadline</th>
-                                                                <th>Status</th>
-                                                                <th class="hidden-xs">Clients</th>
-                                                                <th class="hidden-xs">Progress</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>IT Help Desk</td>
-                                                                <td>11 May 2016</td>
-                                                                <td>
-                                                                    <div class="label label-table label-info">Block</div>
-                                                                </td>
-                                                                <td class="hidden-xs">Semantha Armstrong</td>
-                                                                <td class="hidden-xs">
-                                                                    <div class="progress progress-striped progress-sm">
-                                                                        <div class="progress-bar progress-bar-primary" style="width: 25%;"></div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>Product Dev</td>
-                                                                <td>15 May 2016</td>
-                                                                <td>
-                                                                    <div class="label label-table label-danger">On Hold</div>
-                                                                </td>
-                                                                <td class="hidden-xs">Jonathan Smith</td>
-                                                                <td class="hidden-xs">
-                                                                    <div class="progress progress-striped progress-sm">
-                                                                        <div class="progress-bar progress-bar-success" style="width: 35%;"></div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>3</td>
-                                                                <td>Website Redesign</td>
-                                                                <td>19 May 2016</td>
-                                                                <td>
-                                                                    <div class="label label-table label-success">Approved</div>
-                                                                </td>
-                                                                <td class="hidden-xs">Jacob Armstrong</td>
-                                                                <td class="hidden-xs">
-                                                                    <div class="progress progress-striped progress-sm">
-                                                                        <div class="progress-bar progress-bar-info" style="width: 85%;"></div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>4</td>
-                                                                <td>Local Ad</td>
-                                                                <td>25 May 2016</td>
-                                                                <td>
-                                                                    <div class="label label-table label-warning">Pending</div>
-                                                                </td>
-                                                                <td class="hidden-xs">Sandra Smith</td>
-                                                                <td class="hidden-xs">
-                                                                    <div class="progress progress-striped progress-sm">
-                                                                        <div class="progress-bar progress-bar-warning" style="width: 45%;"></div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>5</td>
-                                                                <td>Design new theme</td>
-                                                                <td>28 May 2016</td>
-                                                                <td>
-                                                                    <div class="label label-table label-warning">Pending</div>
-                                                                </td>
-                                                                <td class="hidden-xs">Will DeBrandon</td>
-                                                                <td class="hidden-xs">
-                                                                    <div class="progress progress-striped progress-sm">
-                                                                        <div class="progress-bar progress-bar-danger" style="width: 55%;"></div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>6</td>
-                                                                <td>Mockup Testing</td>
-                                                                <td>31 May 2016</td>
-                                                                <td>
-                                                                    <div class="label label-table label-warning">Pending</div>
-                                                                </td>
-                                                                <td class="hidden-xs">Alexander Flynn</td>
-                                                                <td class="hidden-xs">
-                                                                    <div class="progress progress-striped progress-sm">
-                                                                        <div class="progress-bar progress-bar-success" style="width: 75%;"></div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <!--===================================================--> 
-                                                    <!--End Hover Rows--> 
-                                                </div>
-                                                <div id="demo-lft-tab-2" class="tab-pane fade">
-                                                        <div class="pad-btm form-inline">
-                                                            <div class="row">
-                                                                <div class="col-sm-6 text-xs-center">
-                                                                    <div class="form-group">
-                                                                        <label class="control-label">Status</label>
-                                                                        <select id="demo-foo-filter-status" class="form-control">
-                                                                            <option value="">Show all</option>
-                                                                            <option value="active">Active</option>
-                                                                            <option value="disabled">Disabled</option>
-                                                                            <option value="suspended">Suspended</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-6 text-xs-center text-right">
-                                                                    <div class="form-group">
-                                                                        <input id="demo-foo-search" type="text" placeholder="Search" class="form-control" autocomplete="off">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                        <table class="table table-hover table-vcenter">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Project</th>
+                                                    <th>Project Deadline</th>
+                                                    <th>Status</th>
+                                                    <th>Clients</th>
+                                                    <th class="hidden-xs">Progress</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>IT Help Desk</td>
+                                                    <td>11 May 2016</td>
+                                                    <td>
+                                                        <div class="label label-table label-info">Block</div>
+                                                    </td>
+                                                    <td>Semantha Armstrong</td>
+                                                    <td class="hidden-xs">
+                                                        <div class="progress progress-striped progress-sm">
+                                                            <div class="progress-bar progress-bar-primary" style="width: 25%;"></div>
                                                         </div>
-                                                    <!-- Foo Table - Filtering -->
-                                                    <!--===================================================-->
-                                                    <table id="demo-foo-filtering" class="table table-bordered table-hover toggle-circle" data-page-size="7">
-                                                        <thead>
-                                                            <tr>
-                                                                <th data-toggle="true">First Name</th>
-                                                                <th class="hidden-xs">Last Name</th>
-                                                                <th data-hide="phone, tablet">Job Title</th>
-                                                                <th data-hide="phone, tablet" class="hidden-xs">DOB</th>
-                                                                <th data-hide="phone, tablet">Status</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Albert</td>
-                                                                <td class="hidden-xs">Desouza</td>
-                                                                <td>System Architect</td>
-                                                                <td class="hidden-xs">22 Jun 1972</td>
-                                                                <td><span class="label label-table label-success">Active</span></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Teresa </td>
-                                                                <td class="hidden-xs">L. Doe</td>
-                                                                <td>Pre-Sales Support</td>
-                                                                <td class="hidden-xs">3 Oct 1981</td>
-                                                                <td><span class="label label-table label-dark">Disabled</span></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Veronica </td>
-                                                                <td class="hidden-xs">Gusikowski</td>
-                                                                <td>Civil Engineer/td> 
-                                                                <td class="hidden-xs">19 Apr 1969</td>
-                                                                <td><span class="label label-table label-danger">Suspended</span></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Bruce </td>
-                                                                <td class="hidden-xs">Rogahn</td>
-                                                                <td>CEO</td>
-                                                                <td class="hidden-xs">13 Dec 1977</td>
-                                                                <td><span class="label label-table label-success">Active</span></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Semantha</td>
-                                                                <td class="hidden-xs">Halladay</td>
-                                                                <td>Junior Technical Assistant</td>
-                                                                <td class="hidden-xs">30 Dec 1991</td>
-                                                                <td><span class="label label-table label-danger">Suspended</span></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Stevan </td>
-                                                                <td class="hidden-xs">Hickle</td>
-                                                                <td>Business Services Sales Representative</td>
-                                                                <td class="hidden-xs">17 Oct 1987</td>
-                                                                <td><span class="label label-table label-dark">Disabled</span></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Carolina </td>
-                                                                <td class="hidden-xs">Hickle</td>
-                                                                <td>Business Services Sales Representative</td>
-                                                                <td class="hidden-xs">17 Oct 1987</td>
-                                                                <td><span class="label label-table label-dark">Disabled</span></td>
-                                                            </tr>
-                                                        </tbody>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <td colspan="5">
-                                                                    <div class="text-right">
-                                                                        <ul class="pagination"></ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tfoot>
-                                                    </table>
-                                                    <!--===================================================-->
-                                                    <!-- End Foo Table - Filtering -->
-                                                </div>
-                                                <div id="demo-lft-tab-3" class="tab-pane fade">
-                                                    <!--Hover Rows--> 
-                                                    <!--===================================================-->
-                                                    <table class="table table-hover table-vcenter">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="hidden-xs">&nbsp;</th>
-                                                                <th>Profile</th>
-                                                                <th>User ID</th>
-                                                                <th class="hidden-xs">Date</th>
-                                                                <th>Amount</th>
-                                                                <th class="hidden-xs">Email Address</th>
-                                                                <th>Status</th>
-                                                                <th class="hidden-xs">Download</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="hidden-xs">
-                                                                    <div class="checkbox">
-                                                                        <label class="form-checkbox form-icon active">
-                                                                        <input type="checkbox">
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="media-object center"> <img src="<%=contextPath%>/img/av1.png" alt="" class="img-rounded img-sm"> </div>
-                                                                </td>
-                                                                <td> Semantha Armstrong </td>
-                                                                <td class="hidden-xs">3 Jan, 2013</td>
-                                                                <td>$239.85</td>
-                                                                <td class="hidden-xs">semantha@gmail.com</td>
-                                                                <td>
-                                                                    <div class="label label-table label-info">Block</div>
-                                                                </td>
-                                                                <td class="hidden-xs">
-                                                                    <!--Split Buttons Dropdown--> 
-                                                                    <!--===================================================-->
-                                                                    <div class="btn-group btn-group-xs">
-                                                                        <button class="btn btn-danger">Download</button>
-                                                                        <button class="btn btn-danger dropdown-toggle dropdown-toggle-icon" data-toggle="dropdown" type="button"> 
-                                                                        <i class="dropdown-caret fa fa-caret-down"></i> 
-                                                                        </button>
-                                                                        <ul class="dropdown-menu">
-                                                                            <li><a href="#">Action</a> </li>
-                                                                            <li><a href="#">Another action</a> </li>
-                                                                            <li><a href="#">Something else here</a> </li>
-                                                                            <li class="divider"></li>
-                                                                            <li><a href="#">Separated link</a> </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <!--===================================================-->
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="hidden-xs">
-                                                                    <div class="checkbox">
-                                                                        <label class="form-checkbox form-icon active">
-                                                                        <input type="checkbox">
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="media-object center"> <img src="<%=contextPath%>/img/av1.png" alt="" class="img-rounded img-sm"> </div>
-                                                                </td>
-                                                                <td> Jonathan Smith </td>
-                                                                <td class="hidden-xs">3 Jan, 2013</td>
-                                                                <td>$239.85</td>
-                                                                <td class="hidden-xs">jonathan@gmail.com</td>
-                                                                <td>
-                                                                    <div class="label label-table label-danger">On Hold</div>
-                                                                </td>
-                                                                <td class="hidden-xs">
-                                                                    <!--Split Buttons Dropdown--> 
-                                                                    <!--===================================================-->
-                                                                    <div class="btn-group btn-group-xs">
-                                                                        <button class="btn btn-danger">Download</button>
-                                                                        <button class="btn btn-danger dropdown-toggle dropdown-toggle-icon" data-toggle="dropdown" type="button"> 
-                                                                        <i class="dropdown-caret fa fa-caret-down"></i> 
-                                                                        </button>
-                                                                        <ul class="dropdown-menu">
-                                                                            <li><a href="#">Action</a> </li>
-                                                                            <li><a href="#">Another action</a> </li>
-                                                                            <li><a href="#">Something else here</a> </li>
-                                                                            <li class="divider"></li>
-                                                                            <li><a href="#">Separated link</a> </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <!--===================================================-->
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="hidden-xs">
-                                                                    <div class="checkbox">
-                                                                        <label class="form-checkbox form-icon active">
-                                                                        <input type="checkbox">
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="media-object center"> <img src="<%=contextPath%>/img/av1.png" alt="" class="img-rounded img-sm"> </div>
-                                                                </td>
-                                                                <td> Jacob Armstrong </td>
-                                                                <td class="hidden-xs">3 Jan, 2013</td>
-                                                                <td>$1395.85</td>
-                                                                <td class="hidden-xs">jacob@gmail.com</td>
-                                                                <td>
-                                                                    <div class="label label-table label-success">Approved</div>
-                                                                </td>
-                                                                <td class="hidden-xs">
-                                                                    <!--Split Buttons Dropdown--> 
-                                                                    <!--===================================================-->
-                                                                    <div class="btn-group btn-group-xs">
-                                                                        <button class="btn btn-danger">Download</button>
-                                                                        <button class="btn btn-danger dropdown-toggle dropdown-toggle-icon" data-toggle="dropdown" type="button"> 
-                                                                        <i class="dropdown-caret fa fa-caret-down"></i> 
-                                                                        </button>
-                                                                        <ul class="dropdown-menu">
-                                                                            <li><a href="#">Action</a> </li>
-                                                                            <li><a href="#">Another action</a> </li>
-                                                                            <li><a href="#">Something else here</a> </li>
-                                                                            <li class="divider"></li>
-                                                                            <li><a href="#">Separated link</a> </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <!--===================================================-->
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="hidden-xs">
-                                                                    <div class="checkbox">
-                                                                        <label class="form-checkbox form-icon active">
-                                                                        <input type="checkbox">
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="media-object center"> <img src="<%=contextPath%>/img/av1.png" alt="" class="img-rounded img-sm"> </div>
-                                                                </td>
-                                                                <td> Sandra Smith </td>
-                                                                <td class="hidden-xs">3 Jan, 2013</td>
-                                                                <td>$125.85</td>
-                                                                <td class="hidden-xs">Sandra@gmail.com</td>
-                                                                <td>
-                                                                    <div class="label label-table label-warning">Pending</div>
-                                                                </td>
-                                                                <td class="hidden-xs">
-                                                                    <!--Split Buttons Dropdown--> 
-                                                                    <!--===================================================-->
-                                                                    <div class="btn-group btn-group-xs">
-                                                                        <button class="btn btn-danger">Download</button>
-                                                                        <button class="btn btn-danger dropdown-toggle dropdown-toggle-icon" data-toggle="dropdown" type="button"> 
-                                                                        <i class="dropdown-caret fa fa-caret-down"></i> 
-                                                                        </button>
-                                                                        <ul class="dropdown-menu">
-                                                                            <li><a href="#">Action</a> </li>
-                                                                            <li><a href="#">Another action</a> </li>
-                                                                            <li><a href="#">Something else here</a> </li>
-                                                                            <li class="divider"></li>
-                                                                            <li><a href="#">Separated link</a> </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <!--===================================================-->
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="hidden-xs">
-                                                                    <div class="checkbox">
-                                                                        <label class="form-checkbox form-icon active">
-                                                                        <input type="checkbox">
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="media-object center"> <img src="<%=contextPath%>/img/av1.png" alt="" class="img-rounded img-sm"> </div>
-                                                                </td>
-                                                                <td> Sandra </td>
-                                                                <td class="hidden-xs">3 Jan, 2013</td>
-                                                                <td>$239.85</td>
-                                                                <td class="hidden-xs">Sandra@gmail.com</td>
-                                                                <td>
-                                                                    <div class="label label-table label-warning">Pending</div>
-                                                                </td>
-                                                                <td class="hidden-xs">
-                                                                    <!--Split Buttons Dropdown--> 
-                                                                    <!--===================================================-->
-                                                                    <div class="btn-group btn-group-xs">
-                                                                        <button class="btn btn-danger">Download</button>
-                                                                        <button class="btn btn-danger dropdown-toggle dropdown-toggle-icon" data-toggle="dropdown" type="button"> 
-                                                                        <i class="dropdown-caret fa fa-caret-down"></i> 
-                                                                        </button>
-                                                                        <ul class="dropdown-menu">
-                                                                            <li><a href="#">Action</a> </li>
-                                                                            <li><a href="#">Another action</a> </li>
-                                                                            <li><a href="#">Something else here</a> </li>
-                                                                            <li class="divider"></li>
-                                                                            <li><a href="#">Separated link</a> </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <!--===================================================-->
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <!--===================================================--> 
-                                                    <!--End Hover Rows--> 
-                                                </div>
-                                            </div>
-                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Product Dev</td>
+                                                    <td>15 May 2016</td>
+                                                    <td>
+                                                        <div class="label label-table label-danger">On Hold</div>
+                                                    </td>
+                                                    <td>Jonathan Smith</td>
+                                                    <td class="hidden-xs">
+                                                        <div class="progress progress-striped progress-sm">
+                                                            <div class="progress-bar progress-bar-success" style="width: 35%;"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Website Redesign</td>
+                                                    <td>19 May 2016</td>
+                                                    <td>
+                                                        <div class="label label-table label-success">Approved</div>
+                                                    </td>
+                                                    <td>Jacob Armstrong</td>
+                                                    <td class="hidden-xs">
+                                                        <div class="progress progress-striped progress-sm">
+                                                            <div class="progress-bar progress-bar-info" style="width: 85%;"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Local Ad</td>
+                                                    <td>25 May 2016</td>
+                                                    <td>
+                                                        <div class="label label-table label-warning">Pending</div>
+                                                    </td>
+                                                    <td>Sandra Smith</td>
+                                                    <td class="hidden-xs">
+                                                        <div class="progress progress-striped progress-sm">
+                                                            <div class="progress-bar progress-bar-warning" style="width: 45%;"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Design new theme</td>
+                                                    <td>28 May 2016</td>
+                                                    <td>
+                                                        <div class="label label-table label-warning">Pending</div>
+                                                    </td>
+                                                    <td>Will DeBrandon</td>
+                                                    <td class="hidden-xs">
+                                                        <div class="progress progress-striped progress-sm">
+                                                            <div class="progress-bar progress-bar-danger" style="width: 55%;"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Mockup Testing</td>
+                                                    <td>31 May 2016</td>
+                                                    <td>
+                                                        <div class="label label-table label-warning">Pending</div>
+                                                    </td>
+                                                    <td>Alexander Flynn</td>
+                                                    <td class="hidden-xs">
+                                                        <div class="progress progress-striped progress-sm">
+                                                            <div class="progress-bar progress-bar-success" style="width: 75%;"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                         <!--===================================================--> 
-                                        <!--End Default Tabs (Left Aligned)--> 
+                                        <!--End Hover Rows--> 
                                     </div>
                                 </div>
                             </div>
@@ -1154,8 +1081,6 @@
                             <div class="nano">
                                 <div class="nano-content">
                                     <ul id="mainnav-menu" class="list-group">
-                                        <!--Category name-->
-                                        <li class="list-header">Navigation</li>
                                         <!--Menu list item-->
                                         <li>
                                             <a href="javascript:void(0)">
@@ -1165,9 +1090,9 @@
                                             </a>
                                             <!--Submenu-->
                                             <ul class="collapse">
-                                                <li><a href="index.html"><i class="fa fa-caret-right"></i> Homepage V1</a></li>
+                                                <li><a href="index.jsp"><i class="fa fa-caret-right"></i> Homepage V1</a></li>
                                                 <li><a href="dashboard-v2.html"><i class="fa fa-caret-right"></i> Homepage V2</a></li>
-                                                <li><a href="index.jsp"><i class="fa fa-caret-right"></i> Homepage V3</a></li>
+                                                <li><a href="dashboard-v3.html"><i class="fa fa-caret-right"></i> Homepage V3</a></li>
                                             </ul>
                                         </li>
                                         <!--Menu list item-->
@@ -1185,9 +1110,6 @@
                                                 <li><a href="ecommerce-products.html"><i class="fa fa-caret-right"></i> Product List </a></li>
                                             </ul>
                                         </li>
-                                        <li class="list-divider"></li>
-                                        <!--Category name-->
-                                        <li class="list-header">Components</li>
                                         <!--Menu list item-->
                                         <li>
                                             <a href="#">
@@ -1302,9 +1224,6 @@
                                                 <li><a href="charts-morris.html"><i class="fa fa-caret-right"></i> Morris Chart </a></li>
                                             </ul>
                                         </li>
-                                        <li class="list-divider"></li>
-                                        <!--Category name-->
-                                        <li class="list-header">Extra</li>
                                         <!--Menu list item-->
                                         <li>
                                             <a href="calendar.html">
@@ -1339,7 +1258,6 @@
                                             </ul>
                                         </li>
                                         <!--Menu list item-->
-
                                         <li>
                                             <a href="#">
                                             <i class="fa fa-map-marker"></i>
@@ -1437,6 +1355,7 @@
                 </nav>
                 <!--===================================================-->
                 <!--END MAIN NAVIGATION-->
+
                 <!--ASIDE-->
                 <!--===================================================-->
                 <aside id="aside-container">
@@ -1762,23 +1681,20 @@
         <script src="<%=contextPath%>/plugins/masked-input/bootstrap-inputmask.min.js"></script>
         <!--Bootstrap Validator [ OPTIONAL ]-->
         <script src="<%=contextPath%>/plugins/bootstrap-validator/bootstrapValidator.min.js"></script>
-        <!--Easy Pie Chart [ OPTIONAL ]-->
-        <script src="<%=contextPath%>/plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
-        <!--jvectormap [ OPTIONAL ]-->
-        <script src="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap.min.js"></script>
-        <script src="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
-        <script src="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
         <!--Flot Chart [ OPTIONAL ]-->
         <script src="<%=contextPath%>/plugins/flot-charts/jquery.flot.min.js"></script>
         <script src="<%=contextPath%>/plugins/flot-charts/jquery.flot.resize.min.js"></script>
         <!--Flot Order Bars Chart [ OPTIONAL ]-->
         <script src="<%=contextPath%>/plugins/flot-charts/jquery.flot.categories.js"></script>
-        <!--FooTable [ OPTIONAL ]-->
-        <script src="<%=contextPath%>/plugins/fooTable/dist/footable.all.min.js"></script>
+        <!--jvectormap [ OPTIONAL ]-->
+        <script src="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap.min.js"></script>
+        <script src="<%=contextPath%>/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+        <!--Easy Pie Chart [ OPTIONAL ]-->
+        <script src="<%=contextPath%>/plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
         <!--Fullscreen jQuery [ OPTIONAL ]-->
         <script src="<%=contextPath%>/plugins/screenfull/screenfull.js"></script>
         <!--Form Wizard [ SAMPLE ]-->
-        <script src="<%=contextPath%>/js/demo/dashboard-v3.js"></script>
+        <script src="<%=contextPath%>/js/demo/index.js"></script>
         <!--Form Wizard [ SAMPLE ]-->
         <script src="<%=contextPath%>/js/demo/wizard.js"></script>
         <!--Demo script [ DEMONSTRATION ]-->
